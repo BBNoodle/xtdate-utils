@@ -15,7 +15,7 @@ setuptools.setup(
     description="A Tool For Processing Time",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/mxtadmin/date-utils",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.7",
