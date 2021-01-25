@@ -24,5 +24,5 @@ setuptools.setup(
         "Natural Language :: Chinese(Simplified)",
         "Development Status :: 5 - Production/Stable"
     ],
-    python_requires=">=3.6"
+    python_requires=">=3.7"
 )
