@@ -15,7 +15,7 @@ setuptools.setup(
     description="A Tool For Processing Iteration Time",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mxtadmin/date-doap_date_utils",
+    url="https://github.com/mxtadmin/doap-date-utils",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.6",
