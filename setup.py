@@ -12,7 +12,7 @@ setuptools.setup(
     version="0.0.1",
     author="Maoxinteng",
     author_email="1214403402@qq.com",
-    description="A Tool For Processing Time",
+    description="A Tool For Processing Iteration Time",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/mxtadmin/date-utils",
