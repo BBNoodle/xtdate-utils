@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="XT-TimeUtils",
+    name="x-dateutils",
     version="0.0.1",
     author="Maoxinteng",
     author_email="1214403402@qq.com",
@@ -20,8 +20,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-        "Development Status :: 5 - Production/Stable",
+        "Operating System :: OS Independent"
     ],
     python_requires=">=3.7"
 )
