@@ -37,9 +37,9 @@ The script itself is currently configuration free.
 Sample usage:
 
 ```python
-from xt-date-utils import DateUtils
+from DoapDateUtils import DOAPTimeUtils
 
-str_to_datetime = DateUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
+str_to_datetime = DOAPTimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 ```
 
 

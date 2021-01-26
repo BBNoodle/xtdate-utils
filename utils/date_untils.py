@@ -7,7 +7,7 @@ from datetime import datetime
 from datetime import timedelta
 
 
-class DateUtils:
+class DOAPTimeUtils:
     _today = datetime.today()
     _now = datetime.now()
     _iteration_period = 14
