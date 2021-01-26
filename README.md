@@ -46,7 +46,7 @@ str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 
 # Changes
 
-**Version 0.1.1**
+**Version 0.1.2**
 
 - Initial version
 
