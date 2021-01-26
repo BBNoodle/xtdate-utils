@@ -8,7 +8,7 @@ This is a tool for processing time.
 It is possible to install the tool with pip:
 
 ```
-pip install xt-TimeUtils==0.1.0
+pip install xt-TimeUtils
 ```
 
 
