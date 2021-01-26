@@ -1,4 +1,3 @@
-# Project description
 
 This is a tool for processing time.
 
