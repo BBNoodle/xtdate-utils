@@ -2,8 +2,8 @@
 # -*- coding:utf-8 -*-
 # @Author : mao
 
-from xtdate_utils.xtdate_utils import DOAPTimeUtils
+from xtdate_utils.xtdate_utils import TimeUtils
 
 __all__ = [
-    "DOAPTimeUtils",
+    "TimeUtils",
 ]

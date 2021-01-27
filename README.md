@@ -48,8 +48,12 @@ str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 
 **Version 0.1.3**
 
-- Initial version
 - Add two new interfaces(*`get_after_day`*, *`get_before_day`*)
+
+**Version 0.1.4**
+
+- Initial version
+- Fix the error of importerror
 
 
 
