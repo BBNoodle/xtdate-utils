@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: xt-TimeUtils
+Version: 0.1.3
+Summary: A Tool For Processing Iteration Time
+Home-page: https://github.com/mxtadmin/doap-date-utils
+Author: Maoxinteng
+Author-email: 1214403402@qq.com
+License: UNKNOWN
+Description: 
+        This is a tool for processing time.
+        
+        
+        
+        # Installation
+        
+        It is possible to install the tool with pip:
+        
+        ```
+        pip install xt-TimeUtils
+        ```
+        
+        
+        
+        # Feature
+        
+        Time processing module based on *`datetime`* and *`arrow`*
+        
+        
+        
+        # Configuration
+        
+        The script itself is currently configuration free.
+        
+        
+        
+        # Dependencies
+        
+        - arrow
+        - datetime
+        
+        
+        
+        # Usage
+        
+        Sample usage:
+        
+        ```python
+        from xtdate_utils.xtdate_utils import TimeUtils
+        
+        str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
+        ```
+        
+        
+        
+        # Changes
+        
+        **Version 0.1.3**
+        
+        - Initial version
+        - Add two new interfaces(*`get_after_day`*, *`get_before_day`*)
+        
+        
+        
+        # License
+        
+        The script is released under the MIT License.The MIT License is registered with and approved by the Open Source Initiative.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
