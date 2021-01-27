@@ -16,7 +16,7 @@ class TimeUtils:
         pass
 
     def __str__(self):
-        return "DOAPDateUtils: A Tool For Processing Time."
+        return "TimeUtils: A Tool For Processing Time."
 
     @classmethod
     def _calculation_iter(cls, iteration_end_time, time_str, iter_count):
@@ -33,16 +33,16 @@ class TimeUtils:
             yield (iteration_end_time - timedelta(days=cls._iteration_period*_)).strftime(time_str)
 
     @staticmethod
-    def str_to_datetime(date_string, doap_format):
+    def str_to_datetime(date_string, date_format):
         """
         Convert string to time format
         :param date_string: Time String
         :type date_string: str
-        :param doap_format: Time format
-        :type doap_format: str
+        :param date_format: Time format
+        :type date_format: str
         :return: datetime
         """
-        return datetime.strptime(date_string, doap_format)
+        return datetime.strptime(date_string, date_format)
 
     @classmethod
     def datetime_format_week_str(cls, date_string, format_str):
@@ -137,3 +137,33 @@ class TimeUtils:
         date_list = [(end_time - timedelta(days=(week + 1)*i)).strftime(time_format)
                      for i in range(count - 1, -1, -1)]
         return date_list
+
+    @classmethod
+    def get_after_day(cls, date_str, date_format, count):
+        """
+        Get after day
+        :param date_str: Date String
+        :type date_str: str
+        :param date_format: Date format
+        :type date_format: str
+        :param count: How many days?
+        :type count: int
+        :return:
+        """
+        _date = cls.str_to_datetime(date_str, date_format)
+        return (_date + timedelta(days=+count)).strftime(date_format)
+
+    @classmethod
+    def get_before_day(cls, date_str, date_format, count):
+        """
+        Get before day
+        :param date_str: Date String
+        :type date_str: str
+        :param date_format: Date format
+        :type date_format: str
+        :param count: How many days?
+        :type count: int
+        :return:
+        """
+        _date = cls.str_to_datetime(date_str, date_format)
+        return (_date + timedelta(days=-count)).strftime(date_format)
