@@ -114,7 +114,7 @@ class TimeUtils:
         return (end_time - timedelta(days=week)).strftime('%Y-%m-%d') if _type else end_time.strftime('%Y-%m-%d')
 
     @classmethod
-    def get_last_cycle_list(cls, end_time_str, time_format, week, count):
+    def get_last_cycle_list(cls, end_time_str, time_format, week, count, is_process=False):
         """
         Get last cycle list
         :param end_time_str: End time in the cycle
@@ -126,6 +126,8 @@ class TimeUtils:
         :type week: int
         :param count: Several iteration cycle, for Example: 7
         :type count: int
+        :param is_process: None
+        :type is_process: bool
         :return: A list of cycle times
         """
         if week not in (0, 1, 2, 3, 4, 5, 6):
@@ -134,7 +136,7 @@ class TimeUtils:
         one_day = timedelta(days=1)
         while end_time.weekday() != week:
             end_time -= one_day
-        date_list = [(end_time - timedelta(days=(week + 1)*i)).strftime(time_format)
+        date_list = [(end_time - timedelta(days=(1 if is_process else week + 1)*i)).strftime(time_format)
                      for i in range(count - 1, -1, -1)]
         return date_list
 

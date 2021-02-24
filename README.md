@@ -52,8 +52,13 @@ str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 
 **Version 0.1.4**
 
-- Initial version
 - Fix the error of importerror
+
+**Version 0.2.0 2021-02-24**
+
+- Initial version
+- Fix the error of 'get_last_cycle_list' interface 
+- Interface 'get_last_cycle_list' add configuration item *`is_process`*, It is used to control the time period. The default time period is the *`(week + 1)`* parameter.
 
 
 
