@@ -63,7 +63,7 @@ str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 
 - Initial version
 - Add *`IterCycleGear`* Class, it supports cycle configurable. Three configuration options have been added: *`day`*、*`week`*、*`iter`*.
-- Add *`update_cycle`* to update *`_iteration_period`* parameter.
+- Add *`update_iteration_period`* to update *`_iteration_period`* parameter.
 
 
 

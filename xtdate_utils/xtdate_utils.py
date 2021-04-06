@@ -8,6 +8,15 @@ from datetime import timedelta
 from enum import IntEnum
 
 
+def update_iteration_period(_str: str):
+    if _str.upper() == 'DAY':
+        TimeUtils._iteration_period = IterCycleGear.ONE_DAY
+    elif _str.upper() == 'WEEK':
+        TimeUtils._iteration_period = IterCycleGear.ONE_WEEK
+    elif _str.upper() == 'ITER':
+        TimeUtils._iteration_period = IterCycleGear.ITERATION_PERIOD
+
+
 class IterCycleGear(IntEnum):
     ONE_DAY = 1
     ONE_WEEK = 7
@@ -15,7 +24,6 @@ class IterCycleGear(IntEnum):
 
 
 class TimeUtils:
-    _today = datetime.today()
     _now = datetime.now()
     _iteration_period = IterCycleGear.ITERATION_PERIOD
 
@@ -24,14 +32,6 @@ class TimeUtils:
 
     def __str__(self):
         return "TimeUtils: A Tool For Processing Time."
-
-    def update_cycle(self, _str: str):
-        if _str.upper() == 'DAY':
-            self._iteration_period = IterCycleGear.ONE_DAY
-        elif _str.upper() == 'WEEK':
-            self._iteration_period = IterCycleGear.ONE_WEEK
-        elif _str.upper() == 'ITER':
-            self._iteration_period = IterCycleGear.ITERATION_PERIOD
 
     @classmethod
     def _calculation_iter(cls, iteration_end_time, time_str, iter_count):
@@ -85,7 +85,7 @@ class TimeUtils:
         :return:
         """
         _time = cls.str_to_datetime(iter_start_time, format_str)
-        time_difference = cls._today.__sub__(_time)
+        time_difference = cls._now.__sub__(_time)
         iter_count_num = int(time_difference.days / cls._iteration_period) \
             if time_difference.days > 0 else (- int(abs(time_difference.days) / cls._iteration_period) - 1)
         end_iter_time = _time + timedelta(days=iter_count_num * cls._iteration_period)
