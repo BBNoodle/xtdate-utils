@@ -5,18 +5,33 @@ import arrow
 
 from datetime import datetime
 from datetime import timedelta
+from enum import IntEnum
+
+
+class IterCycleGear(IntEnum):
+    ONE_DAY = 1
+    ONE_WEEK = 7
+    ITERATION_PERIOD = 14
 
 
 class TimeUtils:
     _today = datetime.today()
     _now = datetime.now()
-    _iteration_period = 14
+    _iteration_period = IterCycleGear.ITERATION_PERIOD
 
     def __init__(self):
         pass
 
     def __str__(self):
         return "TimeUtils: A Tool For Processing Time."
+
+    def update_cycle(self, _str: str):
+        if _str.upper() == 'DAY':
+            self._iteration_period = IterCycleGear.ONE_DAY
+        elif _str.upper() == 'WEEK':
+            self._iteration_period = IterCycleGear.ONE_WEEK
+        elif _str.upper() == 'ITER':
+            self._iteration_period = IterCycleGear.ITERATION_PERIOD
 
     @classmethod
     def _calculation_iter(cls, iteration_end_time, time_str, iter_count):

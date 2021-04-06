@@ -56,9 +56,14 @@ str_to_datetime = TimeUtils.str_to_datetime('2021-01-01', '%Y-%m-%d')
 
 **Version 0.2.0 2021-02-24**
 
-- Initial version
 - Fix the error of 'get_last_cycle_list' interface 
 - Interface 'get_last_cycle_list' add configuration item *`is_process`*, It is used to control the time period. The default time period is the *`(week + 1)`* parameter.
+
+**Version 0.2.1 2021-04-06**
+
+- Initial version
+- Add *`IterCycleGear`* Class, it supports cycle configurable. Three configuration options have been added: *`day`*、*`week`*、*`iter`*.
+- Add *`update_cycle`* to update *`_iteration_period`* parameter.
 
 
 
